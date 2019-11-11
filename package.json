@@ -1,5 +1,5 @@
 {
-  "name": "vue-testvince",
+  "name": "vue-testvince2",
   "version": "0.0.1",
   "description": "test wrapper",
   "main": "src/index.js",
@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "MIT",
+  "repository: {
+    "type": "git",
+    "url" : "git+https://github.com/vincentdh/vue-testvince.git"
+  },
   "dependencies": {
     "sweetalert2": "^9.3.1"
   },
