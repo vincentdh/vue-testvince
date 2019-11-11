@@ -1,0 +1,22 @@
+{
+  "name": "vue-testvince",
+  "version": "0.0.1",
+  "description": "test wrapper",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sweetalert2": "^9.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-plugin-vue": "^6.0.0",
+    "jest": "^24.9.0",
+    "vue": "^2.6.10",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
