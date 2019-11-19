@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import {SweetAlertOptions} from 'sweetalert2';
+import {SweetAlertIcon, SweetAlertOptions} from 'sweetalert2';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 type VueSwalInstance = typeof Swal.fire;
@@ -17,7 +17,8 @@ declare module 'vue/types/vue' {
 
 interface VueSweetalert2Options extends SweetAlertOptions {
     prefix: string,
-    changeTypeToIcon: boolean
+    changeTypeToIcon: boolean,
+    type?: SweetAlertIcon
 }
 
 class VueSweetalert2 {
@@ -33,11 +34,10 @@ class VueSweetalert2 {
             delete options['changeTypeToIcon']
         }
 
-        const swalFunction = (...args: [SweetAlertOptions]) => {
+        const swalFunction = (...args: [VueSweetalert2Options]) => {
 
-            console.log(args)
-            if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
-                args['icon'] = args['type']
+            if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args[0], 'type')) {
+                args[0].icon = args[0].type
                 delete args['type']
             }
 

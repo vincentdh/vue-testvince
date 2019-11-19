@@ -16,9 +16,8 @@ var VueSweetalert2 = (function () {
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
             }
-            console.log(args);
-            if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
-                args['icon'] = args['type'];
+            if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args[0], 'type')) {
+                args[0].icon = args[0].type;
                 delete args['type'];
             }
             if (options) {
