@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "es5",
     "lib": ["es2017", "es7", "es6", "dom"],
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "./dist",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
@@ -17,11 +18,10 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "sourceMap": true,
-    "types": ["node", "jest"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["./src/**/*.ts", "./src/**/*.vue"],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules", "dist", "example"]
 }
