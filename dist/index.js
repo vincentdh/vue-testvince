@@ -18,7 +18,7 @@ var VueSweetalert2 = (function () {
             }
             if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args[0], 'type')) {
                 args[0].icon = args[0].type;
-                delete args['type'];
+                delete args[0]['type'];
             }
             if (options) {
                 var mixed = Swal.mixin(options);
