@@ -1,4 +1,4 @@
-# vue-sweetalert2
+# vue-swal2
 
 [![npm](https://img.shields.io/npm/v/vue-sweetalert2.svg)](https://www.npmjs.com/package/vue-sweetalert2)
 

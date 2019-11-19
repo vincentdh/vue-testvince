@@ -1,8 +1,9 @@
 {
   "name": "vue-testvince2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "test wrapper",
-  "main": "src/index.js",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url" : "git+https://github.com/vincentdh/vue-testvince.git"
+    "url": "git+https://github.com/vincentdh/vue-testvince.git"
   },
   "dependencies": {
     "sweetalert2": "^9.3.1"
@@ -19,6 +20,8 @@
     "eslint": "^6.6.0",
     "eslint-plugin-vue": "^6.0.0",
     "jest": "^24.9.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
     "vue": "^2.6.10",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.10"
