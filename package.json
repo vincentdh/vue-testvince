@@ -1,6 +1,6 @@
 {
   "name": "vue-testvince2",
-  "version": "0.0.5-alpha5",
+  "version": "0.0.5-alpha6",
   "description": "test wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

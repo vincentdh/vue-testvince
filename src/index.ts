@@ -29,6 +29,7 @@ class VueSweetalert2 {
         if (options !== undefined) {
             prefix = options.prefix
             changeTypeToIcon = options.changeTypeToIcon
+            console.log(options)
             delete options['prefix']
             delete options['changeTypeToIcon']
         }
