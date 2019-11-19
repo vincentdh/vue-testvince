@@ -53,6 +53,7 @@ class VueSweetalert2 {
             ) {
                 swalFunction[methodName] = (method => {
                     return (...args: any[]) => {
+                        console.log(args)
                         if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
                             args['icon'] = args['type']
                             delete args['type']
