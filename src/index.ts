@@ -27,6 +27,7 @@ class VueSweetalert2 {
         if (options !== undefined) {
             prefix = options.prefix
             delete options['prefix']
+            console.log('prefixit')
         }
 
         const swalFunction = (...args: [SweetAlertOptions]) => {

@@ -7,6 +7,7 @@ var VueSweetalert2 = (function () {
         if (options !== undefined) {
             prefix = options.prefix;
             delete options['prefix'];
+            console.log('prefixit');
         }
         var swalFunction = function () {
             var args = [];
