@@ -4,13 +4,14 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 declare type VueSwalInstance = typeof Swal.fire;
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: VueSwalInstance;
+        $swal2: VueSwalInstance;
     }
     interface VueConstructor<V extends Vue = Vue> {
-        swal: VueSwalInstance;
+        swal2: VueSwalInstance;
     }
 }
 interface VueSweetalert2Options extends SweetAlertOptions {
+    prefix: string;
 }
 declare class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void;

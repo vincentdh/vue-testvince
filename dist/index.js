@@ -3,6 +3,11 @@ var VueSweetalert2 = (function () {
     function VueSweetalert2() {
     }
     VueSweetalert2.install = function (vue, options) {
+        var prefix = "swal2";
+        if (options !== undefined) {
+            prefix = options.prefix;
+            delete options['prefix'];
+        }
         var swalFunction = function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
@@ -29,9 +34,9 @@ var VueSweetalert2 = (function () {
                 })(methodName);
             }
         }
-        vue['swal2'] = swalFunction;
-        if (!vue.prototype.hasOwnProperty('$swal2')) {
-            vue.prototype.$swal2 = swalFunction;
+        vue[prefix] = swalFunction;
+        if (!vue.prototype.hasOwnProperty('$' + prefix)) {
+            vue.prototype['$' + prefix] = swalFunction;
         }
     };
     return VueSweetalert2;

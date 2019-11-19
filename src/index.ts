@@ -7,20 +7,28 @@ type VueSwalInstance = typeof Swal.fire;
 
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: VueSwalInstance;
+        $swal2: VueSwalInstance;
     }
 
     interface VueConstructor<V extends Vue = Vue> {
-        swal: VueSwalInstance;
+        swal2: VueSwalInstance;
     }
 }
 
 interface VueSweetalert2Options extends SweetAlertOptions {
-    // includeCss?: boolean;
+    prefix: string
 }
 
 class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void {
+
+        let prefix: string = "swal2";
+
+        if (options !== undefined) {
+            prefix = options.prefix
+            delete options['prefix']
+        }
+
         const swalFunction = (...args: [SweetAlertOptions]) => {
             if (options) {
                 const mixed = Swal.mixin(options);
@@ -46,11 +54,11 @@ class VueSweetalert2 {
             }
         }
 
-        vue['swal2'] = swalFunction;
+        vue[prefix] = swalFunction;
 
         // add the instance method
-        if (!vue.prototype.hasOwnProperty('$swal2')) {
-            vue.prototype.$swal2 = swalFunction;
+        if (!vue.prototype.hasOwnProperty('$'+prefix)) {
+            vue.prototype['$'+prefix] = swalFunction;
         }
     }
 }
