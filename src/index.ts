@@ -29,12 +29,18 @@ class VueSweetalert2 {
         if (options !== undefined) {
             prefix = options.prefix
             changeTypeToIcon = options.changeTypeToIcon
-            console.log(options)
             delete options['prefix']
             delete options['changeTypeToIcon']
         }
 
         const swalFunction = (...args: [SweetAlertOptions]) => {
+
+            console.log(args)
+            if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
+                args['icon'] = args['type']
+                delete args['type']
+            }
+
             if (options) {
                 const mixed = Swal.mixin(options);
 
@@ -53,11 +59,6 @@ class VueSweetalert2 {
             ) {
                 swalFunction[methodName] = (method => {
                     return (...args: any[]) => {
-                        console.log(args)
-                        if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
-                            args['icon'] = args['type']
-                            delete args['type']
-                        }
                         return Swal[method].apply(Swal, args);
                     };
                 })(methodName);
