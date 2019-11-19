@@ -16,18 +16,21 @@ declare module 'vue/types/vue' {
 }
 
 interface VueSweetalert2Options extends SweetAlertOptions {
-    prefix: string
+    prefix: string,
+    changeTypeToIcon: boolean
 }
 
 class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void {
 
-        let prefix: string = "swal2";
+        let prefix: string = "swal2"
+        let changeTypeToIcon: boolean = false
 
         if (options !== undefined) {
             prefix = options.prefix
+            changeTypeToIcon = options.changeTypeToIcon
             delete options['prefix']
-            console.log('prefixit')
+            delete options['changeTypeToIcon']
         }
 
         const swalFunction = (...args: [SweetAlertOptions]) => {
@@ -49,6 +52,10 @@ class VueSweetalert2 {
             ) {
                 swalFunction[methodName] = (method => {
                     return (...args: any[]) => {
+                        if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
+                            args['icon'] = args['type']
+                            delete args['type']
+                        }
                         return Swal[method].apply(Swal, args);
                     };
                 })(methodName);

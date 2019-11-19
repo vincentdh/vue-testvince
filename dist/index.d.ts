@@ -12,6 +12,7 @@ declare module 'vue/types/vue' {
 }
 interface VueSweetalert2Options extends SweetAlertOptions {
     prefix: string;
+    changeTypeToIcon: boolean;
 }
 declare class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void;

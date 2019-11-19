@@ -4,10 +4,12 @@ var VueSweetalert2 = (function () {
     }
     VueSweetalert2.install = function (vue, options) {
         var prefix = "swal2";
+        var changeTypeToIcon = false;
         if (options !== undefined) {
             prefix = options.prefix;
+            changeTypeToIcon = options.changeTypeToIcon;
             delete options['prefix'];
-            console.log('prefixit');
+            delete options['changeTypeToIcon'];
         }
         var swalFunction = function () {
             var args = [];
@@ -29,6 +31,10 @@ var VueSweetalert2 = (function () {
                         var args = [];
                         for (var _i = 0; _i < arguments.length; _i++) {
                             args[_i] = arguments[_i];
+                        }
+                        if (changeTypeToIcon && Object.prototype.hasOwnProperty.call(args, 'type')) {
+                            args['icon'] = args['type'];
+                            delete args['type'];
                         }
                         return Swal[method].apply(Swal, args);
                     };
