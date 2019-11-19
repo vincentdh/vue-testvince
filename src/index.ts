@@ -46,11 +46,11 @@ class VueSweetalert2 {
             }
         }
 
-        vue['swal'] = swalFunction;
+        vue['swal2'] = swalFunction;
 
         // add the instance method
-        if (!vue.prototype.hasOwnProperty('$swal')) {
-            vue.prototype.$swal = swalFunction;
+        if (!vue.prototype.hasOwnProperty('$swal2')) {
+            vue.prototype.$swal2 = swalFunction;
         }
     }
 }

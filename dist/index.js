@@ -29,9 +29,9 @@ var VueSweetalert2 = (function () {
                 })(methodName);
             }
         }
-        vue['swal'] = swalFunction;
-        if (!vue.prototype.hasOwnProperty('$swal')) {
-            vue.prototype.$swal = swalFunction;
+        vue['swal2'] = swalFunction;
+        if (!vue.prototype.hasOwnProperty('$swal2')) {
+            vue.prototype.$swal2 = swalFunction;
         }
     };
     return VueSweetalert2;
