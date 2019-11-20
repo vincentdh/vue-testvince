@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1574217525407" clover="3.2.0">
+  <project timestamp="1574217525407" name="All files">
+    <metrics statements="28" coveredstatements="28" conditionals="14" coveredconditionals="13" methods="5" coveredmethods="5" elements="47" coveredelements="46" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/Vincent/Projects/AccesTech/contributions/vue-swal2/src/index.ts">
+      <metrics statements="28" coveredstatements="28" conditionals="14" coveredconditionals="13" methods="5" coveredmethods="5"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="27" count="8" type="stmt"/>
+      <line num="28" count="8" type="stmt"/>
+      <line num="30" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="37" count="9" type="stmt"/>
+      <line num="39" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="44" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="50" count="2" type="stmt"/>
+      <line num="55" count="8" type="stmt"/>
+      <line num="56" count="448" type="cond" truecount="2" falsecount="0"/>
+      <line num="60" count="432" type="stmt"/>
+      <line num="61" count="432" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+      <line num="68" count="8" type="stmt"/>
+      <line num="71" count="8" type="cond" truecount="1" falsecount="1"/>
+      <line num="72" count="8" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="77" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

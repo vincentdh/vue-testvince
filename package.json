@@ -1,11 +1,12 @@
 {
   "name": "vue-testvince2",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "test wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --no-cache",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "author": "",
   "license": "MIT",
@@ -17,9 +18,14 @@
     "sweetalert2": "^9.3.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
     "eslint-plugin-vue": "^6.0.0",
     "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2",
     "vue": "^2.6.10",
